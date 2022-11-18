@@ -1,0 +1,21 @@
+<!-- <p>new works!</p> -->
+<section>
+    <h1>Favorite authors</h1>
+    <div>
+      <a [routerLink]="['home']">Home</a>
+    
+      <label>Add a new author:</label>
+    </div>
+    
+    <form (submit)="onSubmit()">
+      <div>
+        <label>Name:</label>
+        <input type="text" name="name" id="name" [(ngModel)]="newAuthor.name" required>
+      </div>
+      <div>
+        <button [routerLink]="['/home']">Cancel</button>
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+</section>
+<div class="errorMSG">{{mensajeErr}}</div>
